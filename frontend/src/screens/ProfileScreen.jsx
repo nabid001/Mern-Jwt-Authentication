@@ -36,7 +36,7 @@ const ProfileScreen = () => {
 
       toast.success("Profile Updated");
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error?.data?.message || error.error);
     }
   };
   return (
